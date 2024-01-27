@@ -27,7 +27,7 @@ public class TelegramBot extends TelegramLongPollingBot {
     static final String RINGS = "1) 8:05 - 8:50\n\n" +
             "2) 9:00 - 9:45\n\n" +
             "3) 9:55 - 10:40\n\n" +
-            "4) 10:50 - 11:40\n\n" +
+            "4) 10:55 - 11:40\n\n" +
             "5) 11:50 - 12:35\n\n" +
             "6) 12:45 - 13:30\n\n" +
             "7) 13:40 - 14:25\n\n" +
