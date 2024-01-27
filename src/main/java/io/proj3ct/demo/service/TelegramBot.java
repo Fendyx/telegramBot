@@ -23,6 +23,7 @@ public class TelegramBot extends TelegramLongPollingBot {
     static final String HELP_TEXT = "Type /start to start your work with me\n\n" +
             "Type /help to see help text messages\n\n" +
             "Type /info to get information about this bot and why it is usefull";
+    static final String INFOTEXT = "Цей бот створений з метою допомоги учням та батькам дізнаватися корисну інформацію, таку як: Розклад Уроків, розклад дзвінків, зв'язок с класним керівником, список вчителів. Потребуєте список команд? Натисніть /help. Інші питання - писати на пошту: andrey.knapp@gmail.com. Приємного користування ;)";
     static final String RINGS = "1) 8:05 - 8:50\n\n" +
             "2) 9:00 - 9:45\n\n" +
             "3) 9:55 - 10:40\n\n" +
@@ -68,6 +69,19 @@ public class TelegramBot extends TelegramLongPollingBot {
             "5) Зарубіжна література\n" +
             "6) Мистецтво\n" +
             "7) Українська література";
+    static final String TEACHERS = "Англійська мова: Супрун Тетяна Володимирівна / Бунякіна Наталя Анатоліївна\n" +
+            "Алгебра та геометрія: Полієвікова Тетяна Павлівна\n" +
+            "Громадянська освіта та Історія України: Козлюк Алла Борисівна\n" +
+            "Українська мова та література: Левінська Ірина Миколаївна\n" +
+            "Фізика: Моргунова Аліна Андріївна\n" +
+            "Хімія: Зима Галина Миколаївна\n" +
+            "Іспанська мова: Сандецька Ірина Федорівна\n" +
+            "Фізична культура: Левицький Вадим Юрійович / Головач Ольга Миколаївна\n" +
+            "Захист України/Медицина: Нікітін Владислав Аркадійович / Атаманова Олена Юріївна\n" +
+            "Мистецтво та Зарубіжна література: Битко Людмила Дмитрівна\n" +
+            "Інформатика: Жицький Юрій Федорович / \n" +
+            "Географія: Сергата Лариса Миколаївна\n" +
+            "Біологія: Атаманова Олена Юріївна";
 
 
 
@@ -104,6 +118,8 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case "/help":
                     sendMessage(chatId, HELP_TEXT);
                     break;
+                case "/info":
+                    sendMessage(chatId, INFOTEXT);
                 case "Розклад уроків":
                     sendScheduleButtons(chatId);
                     break;
@@ -113,6 +129,8 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case "Зв'язок з класним керівником":
                     sendMessage(chatId, CONTACT);
                     break;
+                case "Вчителі":
+                    sendMessage(chatId, TEACHERS);
                 case "Понеділок":
                     sendMessage(chatId, MONDAY);
                     break;
