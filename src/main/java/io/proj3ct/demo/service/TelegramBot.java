@@ -23,7 +23,7 @@ public class TelegramBot extends TelegramLongPollingBot {
     static final String HELP_TEXT = "Type /start to start your work with me\n\n" +
             "Type /help to see help text messages\n\n" +
             "Type /info to get information about this bot and why it is usefull";
-    static final String INFOTEXT = "Цей бот створений з метою допомоги учням та батькам дізнаватися корисну інформацію, таку як: Розклад Уроків, розклад дзвінків, зв'язок с класним керівником, список вчителів. Потребуєте список команд? Натисніть /help. Інші питання - писати на пошту: andrey.knapp@gmail.com. Приємного користування ;)";
+    static final String INFOTEXT = "Цей бот створений з метою допомоги учням та батькам дізнаватися корисну інформацію, таку як: Розклад уроків, розклад дзвінків, зв'язок с класним керівником, список вчителів. Потребуєте список команд? Натисніть /help. Інші питання - писати на пошту: andrey.knapp@gmail.com. Приємного користування ;)";
     static final String RINGS = "1) 8:05 - 8:50\n\n" +
             "2) 9:00 - 9:45\n\n" +
             "3) 9:55 - 10:40\n\n" +
@@ -183,14 +183,18 @@ public class TelegramBot extends TelegramLongPollingBot {
         KeyboardRow keyboardRow1 = new KeyboardRow();
         KeyboardRow keyboardRow2 = new KeyboardRow();
         KeyboardRow keyboardRow3 = new KeyboardRow();
+        KeyboardRow keyboardRow4 = new KeyboardRow();
         keyboardRow1.add(new KeyboardButton("Розклад уроків"));
         keyboardRow2.add(new KeyboardButton("Розклад дзвінків"));
         keyboardRow3.add(new KeyboardButton("Зв'язок з класним керівником"));
+        keyboardRow4.add(new KeyboardButton("Вчителі"));
+
 
         // Add rows to the keyboard
         keyboardRows.add(keyboardRow1);
         keyboardRows.add(keyboardRow2);
         keyboardRows.add(keyboardRow3);
+        keyboardRows.add(keyboardRow4);
 
         keyboardMarkup.setKeyboard(keyboardRows);
         message.setReplyMarkup(keyboardMarkup);
