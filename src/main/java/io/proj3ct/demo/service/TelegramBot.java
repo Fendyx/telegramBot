@@ -191,7 +191,6 @@ public class TelegramBot extends TelegramLongPollingBot {
         keyboardRow3.add(new KeyboardButton("Зв'язок з класним керівником"));
         keyboardRow4.add(new KeyboardButton("Вчителі"));
 
-
         // Add rows to the keyboard
         keyboardRows.add(keyboardRow1);
         keyboardRows.add(keyboardRow2);
