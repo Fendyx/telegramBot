@@ -82,6 +82,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             "Інформатика: Жицький Юрій Федорович / Саражинський Микола Олександрович\n\n" +
             "Географія: Сергата Лариса Миколаївна\n\n" +
             "Біологія: Атаманова Олена Юріївна";
+    static final String STAND = "Stand with Sergata";
 
 
 
@@ -151,6 +152,9 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case "Назад":
                     sendMessageWithKeyboard(chatId, "Оберіть що вас цікавить");
                     break;
+                case "Stand with Sergata":
+                    sendMessage(chatId, STAND );
+                    break;
 
                 default: sendMessage(chatId, "sorry, there is no such a command");
             }
@@ -186,17 +190,19 @@ public class TelegramBot extends TelegramLongPollingBot {
         KeyboardRow keyboardRow2 = new KeyboardRow();
         KeyboardRow keyboardRow3 = new KeyboardRow();
         KeyboardRow keyboardRow4 = new KeyboardRow();
+        KeyboardRow keyboardRow5 = new KeyboardRow();
         keyboardRow1.add(new KeyboardButton("Розклад уроків"));
         keyboardRow2.add(new KeyboardButton("Розклад дзвінків"));
         keyboardRow3.add(new KeyboardButton("Зв'язок з класним керівником"));
         keyboardRow4.add(new KeyboardButton("Вчителі"));
-
+        keyboardRow5.add(new KeyboardButton("Stand with Sergata"));
 
         // Add rows to the keyboard
         keyboardRows.add(keyboardRow1);
         keyboardRows.add(keyboardRow2);
         keyboardRows.add(keyboardRow3);
         keyboardRows.add(keyboardRow4);
+        keyboardRows.add(keyboardRow5);
 
         keyboardMarkup.setKeyboard(keyboardRows);
         message.setReplyMarkup(keyboardMarkup);
